@@ -16,7 +16,6 @@
   }
   @page { size: 1080px 1350px; margin: 0; }
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  html { color-scheme: light; }
   body { padding-inline: 16px; padding-block: 24px; background: #cfd9e4; font-family: "Poppins", system-ui, sans-serif; color: var(--text); -webkit-font-smoothing: antialiased; }
   .sheet { width: 100%; max-width: 1080px; aspect-ratio: 1080 / 1350; margin: 0 auto 24px; position: relative; overflow: hidden; border-radius: 12px; box-shadow: 0 10px 30px rgba(14, 42, 77, .15); }
   .page {
@@ -95,6 +94,14 @@
   /* modulos */
   .mods { display: flex; flex-direction: column; gap: 30px; margin-top: 36px; }
 
+  /* pagina de un modulo: captura grande y tres puntos */
+  .feats { display: flex; flex-direction: column; gap: 22px; margin-top: 40px; }
+  .feat { display: flex; gap: 18px; align-items: flex-start; }
+  .feat .ck { width: 38px; height: 38px; border-radius: 11px; flex: none; display: grid; place-items: center; background: var(--secondary-light); color: #1a9aa3; margin-top: 2px; }
+  .feat .ck svg { width: 22px; height: 22px; }
+  .feat h3 { font-size: 30px; }
+  .feat p { font-size: 23px; line-height: 1.45; margin-top: 2px; }
+
   /* proximamente */
   .soon { display: flex; flex-direction: column; gap: 28px; margin-top: 44px; }
   .soon .card { padding: 42px 44px; position: relative; }
@@ -160,7 +167,7 @@
   <div class="top">
     <div class="brand"><span class="dot"><svg viewBox="0 0 24 24" fill="#1B84FF"><path d="M12 3.2c-1.6-1-3.4-1.4-5-.9C4.4 3 3 5.3 3.2 8c.2 2.4 1 4.4 1.6 6.6.5 1.9.8 3.9 1.6 5.6.4.9 1.6 1 2.1.1.8-1.4 1-3.1 1.6-4.6.3-.7 1.5-.7 1.8 0 .6 1.5.8 3.2 1.6 4.6.5.9 1.7.8 2.1-.1.8-1.7 1.1-3.7 1.6-5.6.6-2.2 1.4-4.2 1.6-6.6.2-2.7-1.2-5-3.8-5.7-1.6-.5-3.4-.1-5 .9z"/></svg></span>Mi Chero Dental</div>
     <h1>Tu clínica en orden, <span>sin límites.</span></h1>
-    <p class="lead">Agenda, expedientes, odontograma y cobros en un solo lugar. Hecho en El Salvador para clínicas dentales.</p>
+    <p class="lead">Agenda, expedientes, odontograma, laboratorio y cobros en un solo lugar. Hecho en El Salvador para clínicas dentales.</p>
   </div>
   <div class="crop shot" data-src="capturas/06-odontograma.png" data-crop="0.2,0.268,0.62"></div>
   <p class="price">Desde <b>$35</b> al mes por clínica</p>
@@ -210,9 +217,21 @@
   </div>
 </section>
 
-<!-- 5. COBROS Y LABORATORIO -->
+<!-- 5. LABORATORIO -->
 <section class="page">
-  <span class="kicker">Cobros y laboratorio</span>
+  <span class="kicker teal">Laboratorio · incluido en los dos planes</span>
+  <h2>Sabes qué trabajo<br><span class="hl">está afuera.</span></h2>
+  <div class="crop" style="height:440px;margin-top:40px" data-src="capturas/09-laboratorio.png" data-crop="0.25,0.34,0.66"></div>
+  <div class="feats">
+    <div class="feat"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12l5 5L20 7"/></svg></span><div><h3>Cada orden, completa</h3><p>Paciente, pieza, material, color y lo que cuesta.</p></div></div>
+    <div class="feat"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12l5 5L20 7"/></svg></span><div><h3>El seguimiento a la vista</h3><p>Afuera, para colocar o colocado, y cuál está atrasada.</p></div></div>
+    <div class="feat"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12l5 5L20 7"/></svg></span><div><h3>Incluido en Estándar y Profesional</h3><p>Sin costo extra y sin límite de órdenes.</p></div></div>
+  </div>
+</section>
+
+<!-- 6. PRESUPUESTOS Y CONSENTIMIENTOS -->
+<section class="page">
+  <span class="kicker">Cobros y documentos</span>
   <h2>Del presupuesto al cobro,<br><span class="hl">sin papel.</span></h2>
   <div class="mods">
     <div>
@@ -220,25 +239,21 @@
       <div class="cap"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><rect x="7" y="10" width="14" height="10" rx="2"/><circle cx="14" cy="15" r="2"/></svg></span><div><h3>Presupuestos, trabajos y pagos</h3><p>Cada abono queda registrado y sabes quién te debe.</p></div></div>
     </div>
     <div>
-      <div class="crop" style="height:272px" data-src="capturas/09-laboratorio.png" data-crop="0.25,0.34,0.66"></div>
-      <div class="cap"><span class="icon teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.7 3h10.6a2 2 0 0 0 1.7-3l-5-9V3"/></svg></span><div><h3>Laboratorio</h3><p>Qué trabajo está afuera, cuándo regresa y cuál está atrasado.</p></div></div>
+      <div class="crop" style="height:272px" data-src="capturas/08-consentimiento.png" data-crop="0.25,0.08,0.42"></div>
+      <div class="cap"><span class="icon teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M17 21H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2z"/><path d="M9 17c1.5-2 2.5-2 3.5 0s2 2 3.5 0"/></svg></span><div><h3>Consentimientos en tablet</h3><p>El paciente lee y firma ahí mismo; queda guardada la versión que aceptó.</p></div></div>
     </div>
   </div>
 </section>
 
-<!-- 6. CONSENTIMIENTOS Y ORTODONCIA -->
+<!-- 7. ORTODONCIA -->
 <section class="page">
-  <span class="kicker teal">Documentos y ortodoncia</span>
-  <h2>Firmado, guardado<br><span class="hl">y al día.</span></h2>
-  <div class="mods">
-    <div>
-      <div class="crop" style="height:272px" data-src="capturas/08-consentimiento.png" data-crop="0.25,0.08,0.42"></div>
-      <div class="cap"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M17 21H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2z"/><path d="M9 17c1.5-2 2.5-2 3.5 0s2 2 3.5 0"/></svg></span><div><h3>Consentimientos en tablet</h3><p>El paciente lee y firma ahí mismo; queda guardada la versión que aceptó.</p></div></div>
-    </div>
-    <div>
-      <div class="crop" style="height:272px" data-src="capturas/11-ortodoncia.png" data-crop="0.195,0.16,0.77"></div>
-      <div class="cap"><span class="icon teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 13s1.5 2 4 2 4-2 4-2"/><path d="M9 9h.01M15 9h.01"/></svg></span><div><h3>Ortodoncia <span class="pro">PROFESIONAL</span></h3><p>Cada control registrado y las cuotas al día.</p></div></div>
-    </div>
+  <span class="kicker">Plan Profesional</span>
+  <h2>Ortodoncia,<br><span class="hl">de principio a fin.</span></h2>
+  <div class="crop" style="height:462px;margin-top:40px" data-src="capturas/11-ortodoncia.png" data-crop="0.195,0.16,0.77"></div>
+  <div class="feats">
+    <div class="feat"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12l5 5L20 7"/></svg></span><div><h3>El tratamiento por etapas</h3><p>Cada control registrado, con arcos, higiene y próximo objetivo.</p></div></div>
+    <div class="feat"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12l5 5L20 7"/></svg></span><div><h3>Las cuotas al día</h3><p>Ligadas a su presupuesto y sus pagos: sabes quién va atrasado.</p></div></div>
+    <div class="feat"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12l5 5L20 7"/></svg></span><div><h3>Una página para el paciente</h3><p>Ve su progreso y cuándo le toca volver, desde su celular.</p></div></div>
   </div>
 </section>
 
@@ -276,7 +291,7 @@
       <ul>
         <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12l5 5L20 7"/></svg></span>Personal, pacientes, sillones y dispositivos sin límite</li>
         <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12l5 5L20 7"/></svg></span>Agenda, expediente, odontograma, presupuestos y pagos</li>
-        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12l5 5L20 7"/></svg></span>Autoservicio del paciente y laboratorio</li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12l5 5L20 7"/></svg></span>Laboratorio y autoservicio del paciente</li>
         <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12l5 5L20 7"/></svg></span>1 sucursal · sucursal extra $10/mes</li>
         <li class="no"><span class="ck">–</span>Ortodoncia, facturación electrónica y aseguradoras</li>
       </ul>
@@ -316,7 +331,7 @@
   <h2>Agenda tu demo<br>en vivo.</h2>
   <p class="lead">Te lo mostramos con los casos de tu clínica, sin compromiso. En 30 minutos sabes si es para ti.</p>
   <a class="qr" href="https://wa.me/50377387938?text=Hola%20Victor%2C%20quiero%20agendar%20una%20demo%20de%20Mi%20Chero%20Dental"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41 41" shape-rendering="crispEdges"><path stroke="#0E2A4D" d="M0 0.5h7m4 0h2m1 0h7m4 0h4m1 0h3m1 0h7M0 1.5h1m5 0h1m3 0h2m2 0h2m1 0h1m5 0h4m3 0h2m2 0h1m5 0h1M0 2.5h1m1 0h3m1 0h1m1 0h1m1 0h2m1 0h2m2 0h3m4 0h1m4 0h3m2 0h1m1 0h3m1 0h1M0 3.5h1m1 0h3m1 0h1m1 0h1m1 0h5m1 0h1m2 0h1m1 0h2m1 0h1m1 0h1m3 0h1m3 0h1m1 0h3m1 0h1M0 4.5h1m1 0h3m1 0h1m1 0h1m2 0h5m1 0h2m1 0h4m1 0h1m2 0h1m1 0h2m2 0h1m1 0h3m1 0h1M0 5.5h1m5 0h1m1 0h1m4 0h1m1 0h1m2 0h2m2 0h1m1 0h3m2 0h1m1 0h1m2 0h1m5 0h1M0 6.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M8 7.5h1m3 0h1m1 0h2m1 0h3m3 0h2m1 0h1m1 0h1M0 8.5h1m1 0h5m2 0h1m2 0h4m6 0h2m5 0h1m2 0h1m1 0h5M4 9.5h2m1 0h1m3 0h2m1 0h1m1 0h8m2 0h1m2 0h5m1 0h1m2 0h2M1 10.5h1m2 0h1m1 0h1m2 0h1m1 0h1m1 0h1m1 0h5m1 0h2m3 0h3m3 0h3M0 11.5h1m1 0h1m6 0h1m1 0h1m2 0h8m2 0h1m2 0h9m1 0h1m1 0h2M0 12.5h1m5 0h2m1 0h1m1 0h1m5 0h1m1 0h1m2 0h1m1 0h1m1 0h3m2 0h1m2 0h1m1 0h5M2 13.5h2m1 0h1m2 0h3m1 0h1m1 0h2m2 0h1m6 0h1m1 0h2m2 0h2m2 0h1m2 0h3M0 14.5h1m1 0h3m1 0h1m2 0h1m1 0h1m1 0h2m6 0h1m1 0h2m1 0h1m6 0h1m2 0h1m1 0h1M2 15.5h1m1 0h1m3 0h1m2 0h1m3 0h1m2 0h1m5 0h2m1 0h2m1 0h1m1 0h1m1 0h1m3 0h3M0 16.5h2m1 0h1m2 0h1m4 0h1m1 0h2m1 0h2m1 0h1m1 0h4m1 0h2m5 0h1m1 0h1m1 0h1m1 0h2M2 17.5h1m1 0h2m1 0h2m2 0h1m2 0h2m2 0h1m1 0h1m2 0h1m1 0h1m2 0h1m1 0h1m1 0h1m1 0h4m2 0h1M1 18.5h1m2 0h1m1 0h1m6 0h2m1 0h1m1 0h1m2 0h2m1 0h2m3 0h1m1 0h1m1 0h1m2 0h1M0 19.5h3m1 0h1m4 0h1m3 0h2m1 0h1m2 0h2m6 0h1m1 0h2m2 0h2m1 0h2m1 0h1M0 20.5h3m1 0h1m1 0h3m1 0h1m3 0h2m2 0h3m1 0h1m1 0h5m2 0h1m3 0h2m1 0h3M0 21.5h2m1 0h1m5 0h5m3 0h1m2 0h2m5 0h2m2 0h3m4 0h3M2 22.5h1m1 0h1m1 0h5m1 0h8m1 0h2m1 0h1m5 0h1m2 0h2m1 0h1m1 0h1M8 23.5h3m3 0h1m1 0h4m3 0h1m3 0h1m4 0h3m1 0h2m1 0h2M1 24.5h1m2 0h1m1 0h2m2 0h2m2 0h2m1 0h1m1 0h4m1 0h2m3 0h2m3 0h1m1 0h1m1 0h1m1 0h1M0 25.5h5m3 0h4m2 0h1m1 0h1m2 0h3m3 0h1m2 0h1m1 0h2m3 0h1m1 0h1m1 0h1M0 26.5h2m1 0h1m2 0h1m1 0h3m1 0h3m6 0h1m1 0h1m1 0h1m1 0h4m1 0h2m6 0h1M2 27.5h2m4 0h1m1 0h1m1 0h1m1 0h2m1 0h3m3 0h1m3 0h8m1 0h2m1 0h1M1 28.5h1m1 0h1m2 0h1m2 0h1m1 0h1m2 0h2m4 0h1m1 0h1m1 0h3m4 0h1m3 0h6M0 29.5h1m1 0h1m2 0h1m1 0h1m2 0h2m1 0h1m6 0h1m3 0h1m3 0h6m1 0h1m3 0h1M0 30.5h1m4 0h3m1 0h1m3 0h4m1 0h2m3 0h3m3 0h2m2 0h2M0 31.5h1m1 0h2m1 0h1m1 0h1m1 0h2m2 0h1m2 0h4m4 0h1m5 0h2m1 0h3m1 0h4M0 32.5h1m1 0h3m1 0h1m4 0h1m3 0h2m3 0h3m1 0h1m1 0h1m2 0h1m1 0h7m2 0h1M8 33.5h3m6 0h2m1 0h1m1 0h2m4 0h1m1 0h1m1 0h1m3 0h1m2 0h2M0 34.5h7m2 0h1m4 0h4m1 0h1m1 0h1m2 0h1m1 0h2m2 0h1m1 0h1m1 0h1m1 0h1m3 0h1M0 35.5h1m5 0h1m1 0h1m1 0h4m1 0h5m3 0h2m2 0h6m3 0h4M0 36.5h1m1 0h3m1 0h1m1 0h3m3 0h2m3 0h1m1 0h7m3 0h6m2 0h1M0 37.5h1m1 0h3m1 0h1m1 0h1m4 0h4m1 0h3m3 0h2m2 0h3m2 0h1m1 0h1m1 0h1m1 0h1M0 38.5h1m1 0h3m1 0h1m1 0h3m4 0h1m1 0h1m1 0h1m1 0h1m1 0h2m1 0h1m2 0h1m1 0h6m2 0h1M0 39.5h1m5 0h1m3 0h2m1 0h2m2 0h3m5 0h2m1 0h1m1 0h1m1 0h3m1 0h2m1 0h1M0 40.5h7m1 0h1m1 0h1m2 0h1m3 0h2m6 0h3m1 0h1m1 0h1m1 0h4m1 0h1"/></svg><p>Escanea o toca aquí</p></a>
-  <div class="contact"><a href="https://wa.me/50377387938?text=Hola%20Victor%2C%20quiero%20agendar%20una%20demo%20de%20Mi%20Chero%20Dental">WhatsApp +503 7738-7938</a><small>vcastillo.mancia@gmail.com</small></div>
+  <div class="contact"><a href="https://wa.me/50377387938?text=Hola%20Victor%2C%20quiero%20agendar%20una%20demo%20de%20Mi%20Chero%20Dental">WhatsApp +503 7738-7938</a><a href="mailto:vcastillo.mancia@gmail.com"><small>vcastillo.mancia@gmail.com</small></a></div>
 </section>
 
 <script>
