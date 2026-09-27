@@ -114,6 +114,8 @@
   }
   .phone .shot { border-radius: 42px; border: 0; box-shadow: none; }
   .phone .shot .ph { aspect-ratio: 9 / 19.5; }
+  .phone.tall .shot { max-height: 820px; }
+  .toast.inline { position: static; width: auto; align-self: flex-start; margin-top: 34px; box-shadow: var(--shadow); }
 
   /* ---------- 1 portada ---------- */
   .cover { padding: 0; flex-direction: row; }
@@ -394,11 +396,32 @@
     <ul class="points">
       <li><span><b>La agenda de todos los doctores</b> en una sola pantalla, por día o en lista.</span></li>
       <li><span><b>El estado en vivo:</b> quién ya llegó, quién está en consulta y quién terminó.</span></li>
-      <li><span><b>Desde el celular</b> el doctor ve su día sin estar en la clínica.</span></li>
+      <li><span><b>El paciente confirma su cita</b> desde un link por WhatsApp, y la agenda se actualiza sola.</span></li>
     </ul>
   </div>
   <div class="visual">
     <figure class="shot" data-src="capturas/05-agenda.png" data-label="Agenda del día con citas"><div class="chrome"><i></i><i></i><i></i><span>Agenda</span></div></figure>
+  </div>
+</section>
+
+
+<section class="slide self" data-title="Confirmación de citas">
+  <div class="text">
+    <span class="kicker teal">El paciente confirma su cita</span>
+    <h2>Menos sillones vacíos,<br><span class="hl">sin hacer llamadas.</span></h2>
+    <div class="flow">
+      <div class="card step"><div class="n">1</div><h3>Le llega por WhatsApp</h3><p>Un recordatorio con su cita y un link, listo para enviar con un botón.</p></div>
+      <div class="card step"><div class="n">2</div><h3>Confirma, reagenda o cancela</h3><p>Desde su celular, con la dirección en Google Maps y Waze.</p></div>
+      <div class="card step"><div class="n">3</div><h3>Su agenda se actualiza sola</h3><p>Le avisa en pantalla y la cita cambia de estado sin que nadie la toque.</p></div>
+    </div>
+    <div class="card toast inline">
+      <span class="icon teal" style="width:56px;height:56px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="width:30px;height:30px"><path d="M5 12l5 5L20 7"/></svg></span>
+      <span><b>Ana Lucía confirmó su cita</b>Lunes 28 · 10:00 a. m.</span>
+    </div>
+
+  </div>
+  <div class="phones">
+    <div class="phone tall"><figure class="shot" data-src="capturas/12-cita-confirmar.png" data-label="Confirmación de cita (celular)"></figure></div>
   </div>
 </section>
 
@@ -494,11 +517,32 @@
     <ul class="points">
       <li><span><b>El tratamiento por etapas,</b> con cada control registrado.</span></li>
       <li><span><b>Las cuotas del tratamiento</b> ligadas a su presupuesto y sus pagos.</span></li>
-      <li><span><b>Sabe en qué va cada paciente</b> de ortodoncia sin revisar su ficha.</span></li>
+      <li><span><b>Su paciente ve su progreso</b> en una página propia, desde su celular.</span></li>
     </ul>
   </div>
   <div class="visual">
     <figure class="shot" data-src="capturas/11-ortodoncia.png" data-label="Plan de ortodoncia por etapas"><div class="chrome"><i></i><i></i><i></i><span>Ortodoncia</span></div></figure>
+  </div>
+</section>
+
+
+<section class="slide self" data-title="Mi tratamiento">
+  <div class="text">
+    <span class="kicker teal">Ortodoncia · la página del paciente</span>
+    <h2>Su paciente ve<br><span class="hl">cómo avanza.</span></h2>
+    <div class="flow">
+      <div class="card step"><div class="n">1</div><h3>Su progreso, a la vista</h3><p>Cuántos controles lleva, en qué mes va y cuándo termina.</p></div>
+      <div class="card step"><div class="n">2</div><h3>Su próxima cita</h3><p>Con un botón la guarda en su calendario, o avisa si no puede ir.</p></div>
+      <div class="card step"><div class="n">3</div><h3>Sus fotos y su cuenta</h3><p>El antes y ahora, y cuánto ha abonado. La clínica decide qué mostrar.</p></div>
+    </div>
+    <div class="card toast inline">
+      <span class="icon teal" style="width:56px;height:56px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="width:30px;height:30px"><path d="M5 12l5 5L20 7"/></svg></span>
+      <span><b>Va al día con sus cuotas</b>El paciente lo ve en su celular</span>
+    </div>
+
+  </div>
+  <div class="phones">
+    <div class="phone tall"><figure class="shot" data-src="capturas/13-mi-tratamiento.png" data-label="Mi tratamiento (celular)"></figure></div>
   </div>
 </section>
 
@@ -544,7 +588,7 @@
         <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12l5 5L20 7"/></svg></span>Agenda, expediente y odontograma</li>
         <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12l5 5L20 7"/></svg></span>Presupuestos, trabajos y pagos</li>
         <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12l5 5L20 7"/></svg></span>Laboratorio: órdenes y seguimiento</li>
-        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12l5 5L20 7"/></svg></span>Autoservicio del paciente</li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12l5 5L20 7"/></svg></span>Autoservicio y confirmación de citas del paciente</li>
         <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12l5 5L20 7"/></svg></span>1 sucursal · sucursal extra $10/mes</li>
         <li class="no"><span class="ck">–</span>Ortodoncia</li>
         <li class="no"><span class="ck">–</span>Facturación electrónica y aseguradoras</li>
@@ -557,7 +601,7 @@
       <div class="annual">o $500 al año: 2 meses gratis</div>
       <ul>
         <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12l5 5L20 7"/></svg></span>Todo lo del plan Estándar</li>
-        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12l5 5L20 7"/></svg></span>Ortodoncia completa</li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12l5 5L20 7"/></svg></span>Ortodoncia, con la página de progreso del paciente</li>
         <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12l5 5L20 7"/></svg></span><b style="color:#fff">2 sucursales incluidas</b> · extra $10/mes</li>
         <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12l5 5L20 7"/></svg></span>Facturación electrónica integrada<span class="soon-tag">Próximamente</span></li>
         <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12l5 5L20 7"/></svg></span>Aseguradoras<span class="soon-tag">Próximamente</span></li>
