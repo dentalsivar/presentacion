@@ -115,6 +115,17 @@
   .phone .shot { border-radius: 42px; border: 0; box-shadow: none; }
   .phone .shot .ph { aspect-ratio: 9 / 19.5; }
   .phone.tall .shot { max-height: 820px; }
+  .mt-row { display: grid; grid-template-columns: repeat(4, 343px); justify-content: space-between; margin-top: 34px; }
+  .mt-item { display: flex; flex-direction: column; align-items: flex-start; gap: 14px; }
+  .phone.mt { width: 343px; padding: 12px; border-radius: 44px; }
+  .cut { height: 500px; overflow: hidden; border-radius: 34px; background: #EAF1F9; }
+  .cut img { width: 100%; display: block; transform: translateY(calc(var(--t) * -1)); }
+  .mt-item .chip { margin-top: 10px; font-size: 20px; font-weight: 600; padding: 8px 18px; border-radius: 999px; }
+  .chip.blue { background: var(--primary-light); color: var(--primary); }
+  .chip.amber { background: #FEF5E5; color: #b57300; }
+  .chip.teal { background: var(--secondary-light); color: #1a9aa3; }
+  .chip.green { background: #E6FFFA; color: #0E9F7E; }
+  .mt-item p { font-size: 21px; line-height: 1.4; color: var(--text); }
   .toast.inline { position: static; width: auto; align-self: flex-start; margin-top: 34px; box-shadow: var(--shadow); }
 
   /* ---------- 1 portada ---------- */
@@ -445,6 +456,26 @@
   </div>
 </section>
 
+<!-- ============ 7b. ODONTOPEDIATRIA ============ -->
+<section class="slide mod" data-title="Odontopediatría">
+  <div class="text">
+    <span class="kicker teal">Odontopediatría · en los dos planes</span>
+    <h2>Niños y adultos,<br>en el mismo odontograma.</h2>
+    <ul class="points">
+      <li><span><b>Dentición temporal, mixta o permanente:</b> se cambia con un clic en cada evaluación.</span></li>
+      <li><span><b>Los tratamientos pediátricos a la mano:</b> pulpotomía, pulpectomía, coronas de acero y mantenedores de espacio.</span></li>
+      <li><span><b>Solo aparece lo que corresponde:</b> en un niño no salen los tratamientos de adulto, y sus tarifas van marcadas aparte.</span></li>
+    </ul>
+  </div>
+  <div class="visual">
+    <figure class="shot" data-src="capturas/15-odontopediatria.png" data-label="Odontograma de dentición temporal"><div class="chrome"><i></i><i></i><i></i><span>Expediente · Odontograma</span></div></figure>
+    <div class="card floating" style="left:-70px;bottom:-40px">
+      <span class="icon teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="3"/><circle cx="17" cy="10" r="2"/><path d="M3 21v-1a6 6 0 0 1 12 0v1M14 21v-1a4 4 0 0 1 7-2.6"/></svg></span>
+      <span><b>Con su encargado</b>Los datos de mamá o papá, en su ficha</span>
+    </div>
+  </div>
+</section>
+
 <!-- ============ 7. PRESUPUESTO A COBRO ============ -->
 <section class="slide mod" data-title="Del presupuesto al cobro">
   <div class="text">
@@ -517,32 +548,43 @@
     <ul class="points">
       <li><span><b>El tratamiento por etapas,</b> con cada control registrado.</span></li>
       <li><span><b>Las cuotas del tratamiento</b> ligadas a su presupuesto y sus pagos.</span></li>
-      <li><span><b>Su paciente ve su progreso</b> en una página propia, desde su celular.</span></li>
+      <li><span><b>Un link para cada paciente:</b> se lo envía por WhatsApp con un toque y él ve su progreso.</span></li>
     </ul>
   </div>
   <div class="visual">
     <figure class="shot" data-src="capturas/11-ortodoncia.png" data-label="Plan de ortodoncia por etapas"><div class="chrome"><i></i><i></i><i></i><span>Ortodoncia</span></div></figure>
+    <div class="card floating" style="right:-50px;bottom:-56px">
+      <span class="icon teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l1.7-5A8.5 8.5 0 1 1 8 19.3L3 21z"/></svg></span>
+      <span><b>Enviarle su tratamiento</b>Su link sale por WhatsApp con un toque</span>
+    </div>
   </div>
 </section>
 
 
-<section class="slide self" data-title="Mi tratamiento">
-  <div class="text">
-    <span class="kicker teal">Ortodoncia · la página del paciente</span>
-    <h2>Su paciente ve<br><span class="hl">cómo avanza.</span></h2>
-    <div class="flow">
-      <div class="card step"><div class="n">1</div><h3>Su progreso, a la vista</h3><p>Cuántos controles lleva, en qué mes va y cuándo termina.</p></div>
-      <div class="card step"><div class="n">2</div><h3>Su próxima cita</h3><p>Con un botón la guarda en su calendario, o avisa si no puede ir.</p></div>
-      <div class="card step"><div class="n">3</div><h3>Sus fotos y su cuenta</h3><p>El antes y ahora, y cuánto ha abonado. La clínica decide qué mostrar.</p></div>
+<section class="slide" data-title="Mi tratamiento">
+  <span class="kicker teal">Ortodoncia · la página del paciente</span>
+  <h2>Su paciente ve <span class="hl">cómo avanza.</span></h2>
+  <div class="mt-row">
+    <div class="mt-item">
+      <div class="phone mt"><div class="cut" style="--t:1.5%"><img src="capturas/14-mt-activo.png" alt="Mi tratamiento: en tratamiento"></div></div>
+      <span class="chip blue">En tratamiento</span>
+      <p>Su avance y su próxima cita, con botón al calendario.</p>
     </div>
-    <div class="card toast inline">
-      <span class="icon teal" style="width:56px;height:56px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="width:30px;height:30px"><path d="M5 12l5 5L20 7"/></svg></span>
-      <span><b>Va al día con sus cuotas</b>El paciente lo ve en su celular</span>
+    <div class="mt-item">
+      <div class="phone mt"><div class="cut" style="--t:1.5%"><img src="capturas/14-mt-atrasado.png" alt="Mi tratamiento: si falta a un control"></div></div>
+      <span class="chip amber">Si falta a un control</span>
+      <p>La página le pide reprogramar, sin que nadie lo llame.</p>
     </div>
-
-  </div>
-  <div class="phones">
-    <div class="phone tall"><figure class="shot" data-src="capturas/13-mi-tratamiento.png" data-label="Mi tratamiento (celular)"></figure></div>
+    <div class="mt-item">
+      <div class="phone mt"><div class="cut" style="--t:1.5%"><img src="capturas/14-mt-retencion.png" alt="Mi tratamiento: en retención"></div></div>
+      <span class="chip teal">En retención</span>
+      <p>Sus retenedores y las indicaciones de su doctor.</p>
+    </div>
+    <div class="mt-item">
+      <div class="phone mt"><div class="cut" style="--t:1.5%"><img src="capturas/14-mt-terminado.png" alt="Mi tratamiento: al terminar"></div></div>
+      <span class="chip green">Al terminar</span>
+      <p>Su tratamiento completo y su cuenta saldada.</p>
+    </div>
   </div>
 </section>
 
@@ -585,8 +627,8 @@
       <div class="annual">o $350 al año: 2 meses gratis</div>
       <ul>
         <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12l5 5L20 7"/></svg></span>Personal, pacientes, sillones y dispositivos sin límite</li>
-        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12l5 5L20 7"/></svg></span>Agenda, expediente y odontograma</li>
-        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12l5 5L20 7"/></svg></span>Presupuestos, trabajos y pagos</li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12l5 5L20 7"/></svg></span>Odontograma de adultos y odontopediatría</li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12l5 5L20 7"/></svg></span>Agenda, expediente, presupuestos y pagos</li>
         <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12l5 5L20 7"/></svg></span>Laboratorio: órdenes y seguimiento</li>
         <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12l5 5L20 7"/></svg></span>Autoservicio y confirmación de citas del paciente</li>
         <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12l5 5L20 7"/></svg></span>1 sucursal · sucursal extra $10/mes</li>
